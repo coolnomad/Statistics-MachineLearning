@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App.jsx";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/Statistics-MachineLearning/stats-site/">
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
